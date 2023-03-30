@@ -1,0 +1,32 @@
+version: "3.3"
+services:
+  
+  on-demand:
+    build: .
+    restart: always
+    command: 4568 http://orion:1026
+    ports:
+      - '4568:4568'
+    expose:
+      - 4568
+# Orion Context Broker       
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    restart: always
+    command: --nojournal
+    volumes:
+      - ./db:/data/db
+#      - mongo-db:/data/db
+  
+  orion:
+    image: fiware/orion
+    restart: always
+    links:
+      - mongo
+    ports:
+      - "1026:1026"
+    command: -dbhost mongo
+
+#volumes:
+#  mongo-db:

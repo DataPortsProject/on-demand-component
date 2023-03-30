@@ -1,0 +1,37 @@
+[{
+"id":"testDataSource",
+"type":"DataSource",
+"description":"test data source",
+"dataProvided":
+	{
+	"id":"text",
+	"type":"VesselData",
+	"Vessel":"text",
+	"PortCall":"integer",
+	"Status":"text",
+	"Arrival":"date",
+	"Departure":"date",
+	"PortCallPort":"text",
+	"UNLOCODE":"text",
+	"ContainerTerminal":"text",
+	"VesselAgent":"text",
+	"RegularLine":"text"
+	},
+"dataModels":["VesselData"],
+"service":"example",
+"servicePath":"/vesselData",
+"onChain":false,
+"attributes":
+	{
+	"Vessel":"text",
+	"PortCall":"integer",
+	"Status":"text",
+	"Arrival":"date",
+	"Departure":"date",
+	"PortCallPort":"text",
+	"UNLOCODE":"text",
+	"ContainerTerminal":"text",
+	"VesselAgent":"text",
+	"RegularLine":"text"
+	}
+}]

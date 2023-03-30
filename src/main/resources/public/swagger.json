@@ -1,0 +1,163 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "On demand module",
+    "version": "0.0.1",
+    "title": "On demand module REST API",
+    "termsOfService": "https://dataports-project.eu/",
+    "contact": {
+      "name": "DataPorts Project Coordinator",
+      "url": "https://dataports-project.eu/",
+      "email": "info@dataports-project.eu"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/current": {
+      "post": {
+        "summary": "Last values request",
+        "description": "",
+        "operationId": "lastValues",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LastValuesInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "schema": {
+              "$ref": "#/definitions/QueryResponse"
+            }
+          },
+          "400": {
+            "description": "Invalid request."
+          },
+          "500": {
+            "description": "Server error."
+          }
+        }
+      }
+    },
+    "/historical": {
+      "post": {
+        "summary": "Historical data request",
+        "description": "",
+        "operationId": "historicalValues",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/HistoricalValuesInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "schema": {
+              "$ref": "#/definitions/HistoricalResponse"
+            }
+          },
+          "400": {
+            "description": "Invalid request."
+          },
+          "500": {
+            "description": "Server error."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "QueryResponse": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "HistoricalResponse": {
+      "type": "object"
+    },
+    "LastValuesInput": {
+      "type": "object",
+      "properties": {
+        "service": {
+          "type": "string"
+        },
+        "servicePath": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object"
+        }
+      }
+    },
+    "HistoricalValuesInput": {
+      "type": "object",
+      "properties": {
+        "service": {
+          "type": "string"
+        },
+        "servicePath": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "callback": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Project documents",
+    "url": "https://dataports-project.eu/"
+  }
+}

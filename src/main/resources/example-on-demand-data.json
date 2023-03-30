@@ -1,0 +1,30 @@
+[
+	{
+	"id":"urn:ngsi-ld:VesselData:1202005480",
+	"type":"VesselData",
+	"Vessel":{"type":"Text","value":"CONTSHIP ZEN","metadata":{}},
+	"PortCall":{"type":"integer","value":1202005480,"metadata":{}},
+	"Status":{"type":"Text","value":"Completed","metadata":{}},
+	"Arrival":{"type":"DateTime","value":"30/11/2020  23:40:00","metadata":{}},
+	"Departure":{"type":"DateTime","value":"01/12/2020  12:50:00","metadata":{}},
+	"PortCallPort":{"type":"Text","value":"VALENCIA","metadata":{}},
+	"UNLOCODE":{"type":"Text","value":"ESVLC","metadata":{}},
+	"ContainerTerminal":{"type":"Text","value":"CSP IBERIAN VALENCIA TMNAL SAU","metadata":{}},
+	"VesselAgent":{"type":"Text","value":"CMA CGM IBERICA,S.A.","metadata":{}},
+	"RegularLine":{"type":"Text","value":"CMA NEW South Europe-Algerian Service","metadata":{}}
+	},
+	{
+	"id":"urn:ngsi-ld:VesselData:1202005831",
+	"type":"VesselData",
+	"Vessel":{"type":"Text","value":"GNV ATLAS","metadata":{}},
+	"PortCall":{"type":"integer","value":1202005831,"metadata":{}},
+	"Status":{"type":"Text","value":"Completed","metadata":{}},
+	"Arrival":{"type":"DateTime","value":"30/11/2020  23:18:00","metadata":{}},
+	"Departure":{"type":"DateTime","value":"01/12/2020  3:57:00","metadata":{}},
+	"PortCallPort":{"type":"Text","value":"VALENCIA","metadata":{}},
+	"UNLOCODE":{"type":"Text","value":"ESVLC","metadata":{}},
+	"ContainerTerminal":{"type":"Text","value":"CIA. TRASMEDITERRANEA, S.A.","metadata":{}},
+	"VesselAgent":{"type":"Text","value":"E. ERHARDT Y CIA., S.A.","metadata":{}},
+	"RegularLine":{"type":"Text","value":"BUQUES SIN OPERACIÓN COMERCIAL","metadata":{}}
+	}
+]
