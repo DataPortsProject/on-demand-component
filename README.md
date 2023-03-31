@@ -238,6 +238,18 @@ Default Orion base URL: http://localhost:1026/
 Swagger description of the API: http://localhost:4568/swagger
 
 
+## Further Information
+
+
+### Documentation
+
+[Semantic interoperability component documentation](https://platform.dataports-project.eu/docs/semantic/)
+
+[Tutorials](https://moodle.satrd.dcom.upv.es/course/view.php?id=6)
+
+[DataPorts data model](https://github.com/DataPortsProject/datamodel)
+
+
 ### Dependencies
 
 The On Demand component depends on the following components:
